@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to Lead Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.postimg.cc/zGCRLSrJ/Free-Medicine-Background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a4a8a;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #4a4a8a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3a3a6d;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-container select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #fff;
+        }
+
+        .thank-you-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(59, 58, 103, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .thank-you-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .thank-you-text {
+            margin-right: 20px;
+            font-size: 36px;
+        }
+
+        .thank-you-image {
+            max-width: 300px;
+            max-height: 300px;
+        }
+
+        .thank-you-container h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .thank-you-container p {
+            font-size: 24px;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function redirectToThankYou(event) {
+            event.preventDefault(); // Prevent default form submission
+            const thankYouPage = document.createElement('div');
+            thankYouPage.className = 'thank-you-container';
+            thankYouPage.innerHTML = `
+                <div class="thank-you-content">
+                    <div class="thank-you-text">
+                        <h2>Thank You for Placing Your Order!</h2>
+                        <p>We appreciate your trust in us. Redirecting to our homepage...</p>
+                    </div>
+                    <img src="https://i.postimg.cc/6q0rrQC7/3d-background-with-medical-elements-sale-23-2150732527.avif" alt="Thank You" class="thank-you-image">
+                </div>
+            `;
+            document.body.appendChild(thankYouPage);
+
+            setTimeout(() => {
+                window.location.href = 'https://smartlabtech.com/';
+            }, 5000);
+        }
+    </script>
+</head>
+<body>
+
+<div class="logo-container">
+    <img src="https://i.postimg.cc/d0VV3VVH/images.jpg" alt="Smart Labtech Logo">
+</div>
+
+<div class="form-container">
+    <h1>Medicine Order Form</h1>
+    <form onsubmit="redirectToThankYou(event)">
+        <input type="hidden" name="oid" value="00DNS000007OISp">
+        <input type="hidden" name="retURL" value="">
+
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input id="first_name" maxlength="40" name="first_name" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input id="last_name" maxlength="80" name="last_name" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" type="email" />
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" maxlength="40" name="phone" type="tel" />
+        </div>
+
+        <div class="form-group">
+            <label for="00NNS00000IdAmk">Medicine Name</label>
+            <input id="00NNS00000IdAmk" maxlength="255" name="00NNS00000IdAmk" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="00NNS00000IdAun">Quantity</label>
+            <input id="00NNS00000IdAun" name="00NNS00000IdAun" type="number" />
+        </div>
+
+        <div class="form-group">
+            <label for="00NNS00000IdBCX">Additional Instructions</label>
+            <input id="00NNS00000IdBCX" maxlength="255" name="00NNS00000IdBCX" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="00NNS00000IdsuD">Delivery Address</label>
+            <textarea id="00NNS00000IdsuD" name="00NNS00000IdsuD" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="00NNS00000IdBMD">Payment Method</label>
+            <select id="00NNS00000IdBMD" name="00NNS00000IdBMD">
+                <option value="">--None--</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="UPI Payment">UPI Payment</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="COD">COD</option>
+            </select>
+        </div>
+
+        <input type="submit" name="submit" value="Place Order">
+    </form>
+</div>
+
+</body>
+</html>
